@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {useCallback, useState} from 'react'
 import styles from '../styles/Home.module.css'
 
-import { initGameStateWithBombCounts } from './services/data.js'
+import { initGameStateWithBombCounts } from '../services/data.js'
 
 export default function Home() {
 
@@ -29,7 +29,7 @@ export default function Home() {
     });
 
     setGameState(newGameState)
-  })
+  }, [])
 
   const renderedRows = gameState.map((row, rowIdx) => {
     const renderedCells = row.map((cell, cellIdx) => {
