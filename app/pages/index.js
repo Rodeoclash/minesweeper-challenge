@@ -29,7 +29,7 @@ export default function Home() {
     });
 
     setGameState(newGameState)
-  }, [])
+  })
 
   const renderedRows = gameState.map((row, rowIdx) => {
     const renderedCells = row.map((cell, cellIdx) => {
